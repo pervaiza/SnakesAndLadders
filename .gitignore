@@ -3,3 +3,7 @@
 ################################################################################
 
 /SnakesAndLadders/SnakesAndLadders/bin/Debug/net5.0
+/SnakesAndLadders/SnakesAndLadders.Domain/bin/Debug/net5.0
+/SnakesAndLadders/SnakesAndLadders.Domain/obj
+/SnakesAndLadders/SnakesAndLadders.UnitTests/bin/Debug/net5.0
+/SnakesAndLadders/SnakesAndLadders.UnitTests/obj
