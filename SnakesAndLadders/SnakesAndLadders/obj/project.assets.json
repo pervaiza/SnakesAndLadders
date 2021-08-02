@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "SnakesAndLadders.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SnakesAndLadders.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SnakesAndLadders.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SnakesAndLadders.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SnakesAndLadders.Domain/SnakesAndLadders.Domain.csproj",
+      "msbuildProject": "../SnakesAndLadders.Domain/SnakesAndLadders.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "SnakesAndLadders.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\makht\\.nuget\\packages\\": {}
+    "C:\\Users\\Pervaiz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\makht\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders.csproj",
+      "projectUniqueName": "C:\\Users\\Pervaiz\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders.csproj",
       "projectName": "SnakesAndLadders",
-      "projectPath": "C:\\Users\\makht\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders.csproj",
-      "packagesPath": "C:\\Users\\makht\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\makht\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders\\obj\\",
+      "projectPath": "C:\\Users\\Pervaiz\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders.csproj",
+      "packagesPath": "C:\\Users\\Pervaiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pervaiz\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\makht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pervaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Pervaiz\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders.Domain\\SnakesAndLadders.Domain.csproj": {
+              "projectPath": "C:\\Users\\Pervaiz\\source\\repos\\SnakesAndLadders\\SnakesAndLadders\\SnakesAndLadders.Domain\\SnakesAndLadders.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -63,7 +86,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

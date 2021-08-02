@@ -2,7 +2,8 @@
 
 namespace SnakesAndLadders.Domain
 {
-    public class Class1
+    public interface IDiceRoller
     {
+        public int RollDice();
     }
 }

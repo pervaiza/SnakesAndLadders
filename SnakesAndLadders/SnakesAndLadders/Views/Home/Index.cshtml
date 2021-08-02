@@ -1,8 +1,38 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model SnakesAndLadders.Services.GameMatrix
+@{
+    ViewData["Title"] = "Snakes & Ladders";
 }
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div id="divWin" hidden>
+        <h1 class="bg-danger">!!! You Win !!!"</h1>
+    </div>
+    <table class="table" style="border: 2px solid black">
+        @{
+            int SequenceCount = 100;
+
+        }
+        @for (int i = 0; i < 10; i++)
+        {
+            <tr>
+                @for (int j = 0; j < 10; j++)
+                {
+
+                    <td id="@SequenceCount" style="border: 2px solid black"> @SequenceCount </td>
+                    SequenceCount--;
+                }
+            </tr>
+        }
+    </table>
+    <div class="bg-success">
+        <div>
+            Your Dice  :  <label id="lblDiceValue"></label>
+        </div>
+        <button id="btnRollDice">Roll Dice</button>
+        <button hidden id="btnNewGame">New Game</button>
+
+    </div>
+    <input type="hidden" id="currentPosition" value="0" />
+    <input type="hidden" id="previousPosition"  value="0"/>
+
 </div>
+<script src="~/js/snake-ladders.js"></script>
