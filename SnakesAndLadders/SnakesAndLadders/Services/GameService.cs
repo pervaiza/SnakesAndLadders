@@ -42,13 +42,18 @@ namespace SnakesAndLadders.Services
             if (newPositionWithLadder != _position)
             {
                 gameMatrix.Position = newPositionWithLadder;
+                _positionHistory = new List<int>();
+                _positionHistory.Add(newPositionWithLadder);
                 gameMatrix.IsLadder = true;
+                return gameMatrix;
             }
 
             var snakeBite = _gameFactory.SnakeBite(_position);
             if(snakeBite != _position)
             {
                 gameMatrix.Position = snakeBite;
+                _positionHistory = new List<int>();
+                _positionHistory.Add(snakeBite);
                 gameMatrix.IsSnakeBite = true;
             }
 
