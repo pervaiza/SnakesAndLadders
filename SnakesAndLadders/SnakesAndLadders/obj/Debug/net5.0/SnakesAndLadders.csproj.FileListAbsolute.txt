@@ -80,3 +80,9 @@ C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders
 C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\obj\Debug\net5.0\ref\SnakesAndLadders.dll
 C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\obj\Debug\net5.0\SnakesAndLadders.pdb
 C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\obj\Debug\net5.0\SnakesAndLadders.genruntimeconfig.cache
+C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\bin\Debug\net5.0\wwwroot\images\ladder1.png
+C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\bin\Debug\net5.0\wwwroot\images\ladder2.png
+C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\bin\Debug\net5.0\wwwroot\images\ladder3.png
+C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\bin\Debug\net5.0\wwwroot\images\snake1.png
+C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\bin\Debug\net5.0\wwwroot\images\snake2.png
+C:\Users\Pervaiz\source\repos\SnakesAndLadders\SnakesAndLadders\SnakesAndLadders\bin\Debug\net5.0\wwwroot\images\snake3.png

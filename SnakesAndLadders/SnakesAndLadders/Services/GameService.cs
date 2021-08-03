@@ -10,6 +10,9 @@ namespace SnakesAndLadders.Services
     {
         IDiceRoller _diceRoller;
         IGameFactory _gameFactory;
+        private bool _isWon = false;
+        private int _position = 0;
+        private static List<int> _positionHistory = new List<int>();
 
         public GameService(IDiceRoller diceRoller,IGameFactory gameFactory)
         {
@@ -17,19 +20,27 @@ namespace SnakesAndLadders.Services
             _gameFactory = gameFactory;
         }
 
-        public GameMatrix DrawGame()
+        public GameMatrix Move(int diceValue)
         {
-            return new GameMatrix()
+            if (_positionHistory.Sum() <= 100) 
             {
-                DrawLadders = _gameFactory.DrawLadders(),
-                DrawSequences = _gameFactory.DrawSequences(),
-                DrawSnakes = _gameFactory.DrawSnakes(),
-            };
+                _positionHistory.Add(diceValue);
+                _position = _positionHistory.Sum();
+            }
+
+            _isWon = (_position >= 100);
+
+            return new GameMatrix() { Position = _position >= 100 ? 100 :_position, IsWon = _isWon, DiceValue = diceValue};
         }
 
-        public int RollDice()
+        public void ResetGame()
         {
-            return _diceRoller.RollDice();
+            _position = 0;
+            _positionHistory = new List<int>();
+        }
+        public GameMatrix RollDice()
+        {
+            return Move(_diceRoller.RollDice());
         }
     }
 }

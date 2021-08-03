@@ -1,36 +1,30 @@
 ﻿document.getElementById('btnRollDice').addEventListener('click', function () {
     fetch('/home/rolldice')
-        .then(res => res.text())
-        .then(diceValue => {
+        .then(res => res.json())
+        .then(gameMatrix => {
 
-            let previousPosition = document.getElementById('previousPosition').value;
-            document.getElementById('lblDiceValue').innerText = diceValue;
+            [...document.querySelectorAll('.td-seq')].map(x => x.classList.remove('bg-success'));
 
-            let newPosition = Number(previousPosition) + Number(diceValue);
-            document.getElementById('previousPosition').value = newPosition
-
-            if (previousPosition != 0) {
-                var elementPre = document.getElementById(previousPosition);
-                elementPre.classList.remove('bg-success');
-            }
-
-            if (previousPosition >= 100 || newPosition >= 100) {
-                document.getElementById('previousPosition').value = 0
+            if (gameMatrix.isWon) {
                 document.getElementById('divWin').removeAttribute("hidden");
                 document.getElementById('btnNewGame').removeAttribute("hidden");
-                document.getElementById('btnRollDice').setAttribute("hidden",true);
+                document.getElementById('btnRollDice').setAttribute("hidden", true);
+                return;
             }
-            else {
-                var element = document.getElementById(newPosition);
-                element.classList.add('bg-success');
-            }
-        })
 
+            document.getElementById('lblDiceValue').innerText = gameMatrix.diceValue;
+            var element = document.getElementById(gameMatrix.position);
+            element.classList.add('bg-success');
+        })
 });
 
 document.getElementById('btnNewGame').addEventListener('click', function () {
-    document.getElementById('btnRollDice').removeAttribute("hidden");
-    document.getElementById('btnNewGame').setAttribute("hidden", true);
-    document.getElementById('divWin').setAttribute("hidden", true);
-    document.getElementById('lblDiceValue').innerText = 0;
+    fetch('/home/ResetGame')
+        .then(res => {
+            document.getElementById('btnRollDice').removeAttribute("hidden");
+            document.getElementById('btnNewGame').setAttribute("hidden", true);
+            document.getElementById('divWin').setAttribute("hidden", true);
+            document.getElementById('lblDiceValue').innerText = 0;
+        })
 });
+

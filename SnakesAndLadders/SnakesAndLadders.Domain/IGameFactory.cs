@@ -8,8 +8,6 @@ namespace SnakesAndLadders.Domain
 {
     public interface IGameFactory
     {
-        public int[] DrawSequences();
-
         public int[] DrawLadders();
 
         public int[] DrawSnakes();

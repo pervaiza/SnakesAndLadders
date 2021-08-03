@@ -23,13 +23,18 @@ namespace SnakesAndLadders.Controllers
 
         public IActionResult Index()
         {
-            return View(_gameService.DrawGame());
+            return View();
         }
 
-        public int RollDice()
+        public GameMatrix RollDice()
         {
             return _gameService.RollDice();
         }
+        public void ResetGame()
+        {
+            _gameService.ResetGame();
+        }
+
 
         public IActionResult Privacy()
         {

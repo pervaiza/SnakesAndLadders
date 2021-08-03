@@ -7,24 +7,15 @@ namespace SnakesAndLadders.Services
 {
     public interface IGameService
     {
-        public int RollDice();
+        public GameMatrix RollDice();
+        public void ResetGame();
 
-        public GameMatrix DrawGame();
     }
 
     public class GameMatrix
     {
-        public int CurrentPositionUser1;
-
-        public int CurrentPositionUser2;
-
-        public int RollDice;
-
-        public int[] DrawSequences;
-
-        public int[] DrawLadders;
-
-        public int[] DrawSnakes;
-
+        public int DiceValue { get; set; }
+        public int Position { get; set; }
+        public bool IsWon { get; set; }
     }
 }

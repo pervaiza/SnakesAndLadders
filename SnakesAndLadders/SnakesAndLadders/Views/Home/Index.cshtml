@@ -1,5 +1,4 @@
-﻿@model SnakesAndLadders.Services.GameMatrix
-@{
+﻿@{
     ViewData["Title"] = "Snakes & Ladders";
 }
 <div class="text-center">
@@ -15,23 +14,20 @@
             <tr>
                 @for (int j = 0; j < 10; j++)
                 {
-
-                    <td id="@SequenceCount" style="border: 2px solid black"> @SequenceCount </td>
+                    <td class="td-seq" id="@SequenceCount" style="border: 2px solid black"> @SequenceCount </td>
                     SequenceCount--;
                 }
             </tr>
         }
     </table>
+
     <div class="bg-success">
         <div>
             Your Dice  :  <label id="lblDiceValue"></label>
         </div>
         <button id="btnRollDice">Roll Dice</button>
         <button hidden id="btnNewGame">New Game</button>
-
     </div>
-    <input type="hidden" id="currentPosition" value="0" />
-    <input type="hidden" id="previousPosition"  value="0"/>
 
 </div>
 <script src="~/js/snake-ladders.js"></script>
