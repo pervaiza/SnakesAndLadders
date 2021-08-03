@@ -30,7 +30,29 @@ namespace SnakesAndLadders.Services
 
             _isWon = (_position >= 100);
 
-            return new GameMatrix() { Position = _position >= 100 ? 100 :_position, IsWon = _isWon, DiceValue = diceValue};
+            var gameMatrix = new GameMatrix()
+            {
+                Position = _position >= 100 ? 100 : _position,
+                IsWon = _isWon,
+                DiceValue = diceValue
+            };
+
+            var newPositionWithLadder=_gameFactory.ApplyLadder(_position);
+            
+            if (newPositionWithLadder != _position)
+            {
+                gameMatrix.Position = newPositionWithLadder;
+                gameMatrix.IsLadder = true;
+            }
+
+            var snakeBite = _gameFactory.SnakeBite(_position);
+            if(snakeBite != _position)
+            {
+                gameMatrix.Position = snakeBite;
+                gameMatrix.IsSnakeBite = true;
+            }
+
+            return gameMatrix;
         }
 
         public void ResetGame()

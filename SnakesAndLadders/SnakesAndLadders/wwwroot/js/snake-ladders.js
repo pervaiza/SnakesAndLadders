@@ -12,6 +12,21 @@
                 return;
             }
 
+            if (gameMatrix.isSnakeBite) {
+                document.getElementById('divSnake').removeAttribute("hidden");
+            }
+            else {
+                document.getElementById('divSnake').setAttribute("hidden",true);
+
+            }
+
+            if (gameMatrix.isLadder) {
+                document.getElementById('divLadder').removeAttribute("hidden");
+            }
+            else {
+                document.getElementById('divLadder').setAttribute("hidden",true);
+            }
+
             document.getElementById('lblDiceValue').innerText = gameMatrix.diceValue;
             var element = document.getElementById(gameMatrix.position);
             element.classList.add('bg-success');
@@ -25,6 +40,19 @@ document.getElementById('btnNewGame').addEventListener('click', function () {
             document.getElementById('btnNewGame').setAttribute("hidden", true);
             document.getElementById('divWin').setAttribute("hidden", true);
             document.getElementById('lblDiceValue').innerText = 0;
+            document.getElementById('divSnake').setAttribute("hidden", true);
+            document.getElementById('divLadder').setAttribute("hidden", true);
         })
 });
 
+window.addEventListener("load", function () {
+    drawLadders();
+});
+
+function drawLadders() {
+    //todo
+}
+
+function drawSnakes() {
+    //todo
+}

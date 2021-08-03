@@ -1,6 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Snakes & Ladders";
 }
+<style>
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+</style>
 <div class="text-center">
     <div id="divWin" hidden>
         <h1 class="bg-danger">!!! You Win !!!"</h1>
@@ -19,8 +28,21 @@
                 }
             </tr>
         }
+       
     </table>
+    <div>
+        <div id="divSnake" hidden>
+            Gosh snake
 
+            <img src="~/images/snake1.png" height="50" width="50" />
+        </div>
+        <div id="divLadder" hidden>
+            Woo hoo ladder
+
+            <img src="~/images/ladder1.png" height="50" width="50" />
+        </div>
+
+    </div>
     <div class="bg-success">
         <div>
             Your Dice  :  <label id="lblDiceValue"></label>
@@ -28,6 +50,7 @@
         <button id="btnRollDice">Roll Dice</button>
         <button hidden id="btnNewGame">New Game</button>
     </div>
+
 
 </div>
 <script src="~/js/snake-ladders.js"></script>
