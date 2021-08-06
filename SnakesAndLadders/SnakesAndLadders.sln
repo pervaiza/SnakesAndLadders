@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakesAndLadders.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnakesAndLadders", "SnakesAndLadders\SnakesAndLadders.csproj", "{8BF3E8D4-C697-458E-BB33-2F1D197A412F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakesAndLadders.UnitTests", "SnakesAndLadders.UnitTests\SnakesAndLadders.UnitTests.csproj", "{AD15DD17-0A44-432F-A719-17B30B85E54A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8BF3E8D4-C697-458E-BB33-2F1D197A412F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF3E8D4-C697-458E-BB33-2F1D197A412F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF3E8D4-C697-458E-BB33-2F1D197A412F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD15DD17-0A44-432F-A719-17B30B85E54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD15DD17-0A44-432F-A719-17B30B85E54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD15DD17-0A44-432F-A719-17B30B85E54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD15DD17-0A44-432F-A719-17B30B85E54A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

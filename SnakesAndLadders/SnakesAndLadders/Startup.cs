@@ -25,6 +25,8 @@ namespace SnakesAndLadders
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<ILadder, Ladder>();
+            services.AddTransient<ISnake, Snake>();
             services.AddTransient<IDiceRoller, DiceRoller>();
             services.AddTransient<IGameFactory, GameFactory>();
             services.AddTransient<IGameService, GameService>();
